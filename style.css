@@ -92,12 +92,19 @@ color: #9e63f5;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .out{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 70px;
   font-weight: bolder;
   transition: 1s ease-in all;
+  color: white;
+}
+.clk-tit{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #080827;
+  margin-top: 10px;
 }
 #min{
   width: 150px;
@@ -106,6 +113,8 @@ color: #9e63f5;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
 }
 #sec{
   width: 150px;
@@ -114,6 +123,8 @@ color: #9e63f5;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
 }
 #stopwatch #btns{
   width: 100%;
@@ -138,11 +149,25 @@ button:hover,button:focus{
   color: #080827;
   cursor: pointer;
 }
-
+.in{
+  width: 100%;
+  height: 30%;
+  background-color: crimson;
+}
+.clock{
+  width: 100%;
+  height: 40%;
+  background-color: red;
+}
+.btn{
+  width: 100%;
+  height: 30%;
+  background-color: pink;
+}
 
 @media (max-width:450px){
   #navbar{
-    height: 60px;
+    height: 70px;
   }
   .highlight{
     font-size: 23px;
@@ -179,6 +204,12 @@ button:hover,button:focus{
 #stopwatch #btns{
   flex-direction: column;
   gap: 20px;
+}
+.clk-tit{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #080827;
+  margin-top: 5px;
+  font-size: 15px;
 }
 button{
   font-size: 18px;
