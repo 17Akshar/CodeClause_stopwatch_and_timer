@@ -23,6 +23,7 @@ function Mode(n){
     navbar.style.backgroundColor = "#35D74D"
     stop.style.color = "#3e7922"
     time.style.color = "#1d4509"
+    btn_reset();
   }
 }
 var tens = 0;
