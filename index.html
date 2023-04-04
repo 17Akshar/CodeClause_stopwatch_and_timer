@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer & Stopwatch</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+  <div class="main">
+    <div class="section">
+      <div id="stopwatch">
+        <div id="stop_clock">
+          <div id="hours"><p id="hr" onchange="animate()" class="out">00</p></div>
+          <div id="min"><p id="mins" onchange="animate()" class="out">00</p></div>
+          <div id="sec"><p id="secs" onchange="animate()" class="out">00</p></div>
+        </div>
+        <div id="btns">
+          <button onclick="btn_start()">Start</button>
+          <button onclick="btn_stop()">Stop</button>
+          <button onclick="btn_reset()">Reset</button>
+        </div>
+      </div>
+      <div id="timer"></div>
+    </div>
+    <div id="navbar">
+      <li class="change_stop highlight" onclick="Mode(1)">Stopwatch</li>
+      <li class="change_time dimlight" onclick="Mode(2)">Timer</li>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
