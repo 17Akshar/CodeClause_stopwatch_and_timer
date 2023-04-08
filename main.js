@@ -91,3 +91,54 @@ function animate(){
   // sec.style.ani = "bounce"
 
 }
+
+
+var time;
+var ttime;
+function SetTimer(){
+   time = document.getElementById("in_value").value;
+  if(time==0||time==""){
+    alert("VALUE CANNOT BE ZERO! AGAIN ENTER THE VALUE")
+
+  }else{
+    ttime=time*60;
+    tsec = time*60;
+    timer_sec.innerHTML = tsec;
+    timer_interval = setInterval(runTimer,1000);
+    
+  }
+  
+}
+var timer_sec = document.getElementById("timer_sec");
+var time_percentage;
+var bar = document.getElementById("bar")
+function runTimer(){
+  
+  if(tsec==0){
+    alert("TIMES UP!")
+    clearInterval(timer_interval);
+    tsec=0;
+    bar.style.width = "100%"
+  }
+  else{
+    tsec--;
+    timer_sec.innerHTML = tsec;
+
+    // if(tsec==0){
+    //   clearInterval(timer_interval)
+    //   tsec==0;
+    // }
+    time_percentage = (tsec/ttime)*100;
+    console.log(time_percentage)
+    bar.style.width = `${time_percentage}`+"%"
+  }
+  
+}
+
+function timer_reset(){
+  clearInterval(timer_interval)
+  tsec=0;
+  timer_sec.innerHTML = "00";
+  document.getElementById("in_value").innerHTML = "0";
+  bar.style.width = "100%"
+}

@@ -105,6 +105,7 @@ color: #9e63f5;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #080827;
   margin-top: 10px;
+  font-weight:700;
 }
 #min{
   width: 150px;
@@ -151,19 +152,98 @@ button:hover,button:focus{
 }
 .in{
   width: 100%;
-  height: 30%;
-  background-color: crimson;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
+.in .question{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #446d31;
+}
+.in input{
+  width: 100px;
+  height: 30px;
+  padding: 15px 10px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  color: #446d31;
+}
+.unit p{
+  color: #446d31;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .clock{
   width: 100%;
-  height: 40%;
-  background-color: red;
+  height: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  width: 300px;
+  height: 250px;
+  background: linear-gradient(to bottom,#35D74D,#a4fe7a);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.card .bar{
+  width: 100%;
+  height: 15%;
+}
+#bar{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient();
+  background-color:  #3c811c;
+  transition: 1s ease;
+}
+#timer_hr,#timer_min,#timer_sec{
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #143504;
+}
+.timer_out{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #080827;
+  font-size: 20px;
 }
 .btn{
   width: 100%;
-  height: 30%;
-  background-color: pink;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
+.btn button{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #3c811c;
+  color: white;
+  font-weight: bold;
+}
+.btn button:focus{
+  background-color: #143504;
+  color: #35D74D;
+}
+.btn button:hover{
+  cursor: pointer;
+}
+
 
 @media (max-width:450px){
   #navbar{
@@ -214,5 +294,31 @@ button:hover,button:focus{
 button{
   font-size: 18px;
   padding: 10px 40px;
+}
+.card{
+  width: 200px;
+  height: 220px;
+}
+.card .bar{
+  width: 100%;
+  height: 10%;
+}
+.btn button{
+  font-size: 15px;
+  padding: 8px 30px;
+}
+.in{
+  /* padding: 20px 1px; */
+}
+.in .question{
+  font-size: 15px;
+}
+.in input{
+  width: 60px;
+  height: 40px;
+  font-size: 28px;
+}
+.unit p{
+  font-size: 18px;
 }
 }

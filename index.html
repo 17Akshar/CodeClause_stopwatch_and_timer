@@ -6,10 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timer & Stopwatch</title>
   <link rel="stylesheet" href="style.css">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
   <div class="main">
@@ -29,11 +27,26 @@
       </div>
       <div id="timer">
         <div class="in">
-          <div class="question"></div>
-          input
+          <div class="question"><p>Set the timer ?</p></div>
+          <input type="text"  id="in_value">
+          <div class="unit">
+              <p>min</p>
+          </div>
         </div>
-        <div class="clock"></div>
-        <div class="btn"></div>
+        <div class="btn">
+          <button onclick="SetTimer()">Start</button>
+          <button onclick="timer_reset()">Reset</button>
+        </div>
+
+        <div class="clock">
+          <div class="card">
+            <p id="timer_sec">00</p>
+            <p class="timer_out">Seconds</p>
+            <div class="bar">
+              <div id="bar"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div id="navbar">
